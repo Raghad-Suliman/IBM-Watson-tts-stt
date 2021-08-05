@@ -1,0 +1,16 @@
+Ux-6jAnWt2fvlXSOE_IquEuO_7qcrazgAeHGIN8B1igS
+
+
+https://api.us-south.speech-to-text.watson.cloud.ibm.com
+
+
+
+from ibm_watson import SpeechToTextV1
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
+
+authenticator = IAMAuthenticator('{apikey}')
+speech_to_text = SpeechToTextV1(
+    authenticator=authenticator
+)
+
+speech_to_text.set_service_url('https://api.us-east.speech-to-text.watson.cloud.ibm.com')
